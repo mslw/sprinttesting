@@ -7,11 +7,12 @@ machine:
 
 dependencies:
   override:
-    - docker build --rm=false -t oesteban/sprinttest:latest .
+    - docker build --rm=false -t michal/sprinttest:latest .
 
 test:
   override:
-    - docker run -ti --rm=false oesteban/sprinttest 6
+    - docker run -ti --rm=false michal/sprinttest 6
+    - docker run -ti --rm=false --entrypoint=pytest michal/sprinttest .
 
 #deployment:
 #  production:
