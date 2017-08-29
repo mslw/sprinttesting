@@ -12,7 +12,7 @@ dependencies:
 test:
   override:
     - docker run -ti --rm=false michal/sprinttest 6
-    - docker run -ti --rm=false --entrypoint=pytest michal/sprinttest .
+    - docker run -ti --rm=false --entrypoint=pytest michal/sprinttest test_sprint.py
 
 #deployment:
 #  production:
